@@ -24,7 +24,7 @@ class SearchField extends StatelessWidget {
         decoration: InputDecoration(
           enabledBorder: InputBorder.none,
           focusedBorder: InputBorder.none,
-          hintText: "Cari Berita",
+          hintText: "Cari Laporan",
           prefixIcon: Icon(Icons.search),
           contentPadding: EdgeInsets.symmetric(
               horizontal: getProportionateScreenWidth(4),

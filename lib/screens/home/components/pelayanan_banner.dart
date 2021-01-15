@@ -24,7 +24,7 @@ class PelayananBanner extends StatelessWidget {
       ),
       child: Text.rich(
         TextSpan(
-          text: "Comby Siap melayanimu\n",
+          text: "Laporkan Permasalahan\n",
           style: TextStyle(
             color: Colors.white,
           ),
