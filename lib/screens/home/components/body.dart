@@ -1,11 +1,14 @@
 import 'package:combe_app/constant.dart';
 import 'package:combe_app/screens/home/components/pelayanan_banner.dart';
 import 'package:combe_app/screens/home/components/search.dart';
+import 'package:combe_app/screens/home/components/section_title.dart';
 import 'package:combe_app/screens/login_succes/components/icon_btn_counter.dart';
 import 'package:combe_app/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../CameraPreview.dart';
+import 'categories.dart';
 import 'home_header.dart';
 
 class Body extends StatelessWidget {
@@ -27,36 +30,106 @@ class Body extends StatelessWidget {
               height: getProportionateScreenWidth(10),
             ),
             Categories(),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class Categories extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    List<Map<String, dynamic>> categories = [
-      {"icon": "assets/icon/Flash Icon.svg", "text": "Bencana Alam"},
-      {"icon": "assets/icon/Flash Icon.svg", "text": "Bencana Alam"},
-      {"icon": "assets/icon/Flash Icon.svg", "text": "Bencana Alam"},
-      {"icon": "assets/icon/Flash Icon.svg", "text": "Bencana Alam"},
-      {"icon": "assets/icon/Discover.svg", "text": "Lainnya"},
-    ];
-    return SizedBox(
-      width: getProportionateScreenWidth(25),
-      child: AspectRatio(
-        aspectRatio: 1,
-        child: Container(
-          padding: EdgeInsets.all(getProportionateScreenWidth(6)),
-          decoration: BoxDecoration(
-            color: Color(0xFFFFECDF),
-            borderRadius: BorderRadius.circular(
-              10,
+            SizedBox(
+              height: getProportionateScreenWidth(10),
             ),
-          ),
-          child: SvgPicture.asset(categories[0]["icon"]),
+            SectionTitle(
+              text: "Laporan Terbaru",
+              press: () {},
+            ),
+            SizedBox(
+              width: getProportionateScreenWidth(50),
+              height: getProportionateScreenWidth(10),
+              // child: Image.asset(
+              //   "assets/image/image1",
+              // ),
+            ),
+            Container(
+              width: getProportionateScreenWidth(180),
+              child: RaisedButton(
+                elevation: 5,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (content) => CameraPreview()));
+                },
+                padding: EdgeInsets.all(25),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15)),
+                color: Color(0xFF4A3298),
+                child: Text('INFRASTRUKTUR ',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold)),
+              ),
+            ),
+            SizedBox(
+              height: getProportionateScreenWidth(10),
+            ),
+            Container(
+              width: getProportionateScreenWidth(180),
+              child: RaisedButton(
+                elevation: 5,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (content) => CameraPreview()));
+                },
+                padding: EdgeInsets.all(25),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15)),
+                color: Color(0xFF4A3298),
+                child: Text('KESEHATAN',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold)),
+              ),
+            ),
+            SizedBox(
+              height: getProportionateScreenWidth(10),
+            ),
+            Container(
+              width: getProportionateScreenWidth(180),
+              child: RaisedButton(
+                elevation: 5,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (content) => CameraPreview()));
+                },
+                padding: EdgeInsets.all(25),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15)),
+                color: Color(0xFF4A3298),
+                child: Text('KEMISKINAN',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold)),
+              ),
+            ),
+            SizedBox(
+              height: getProportionateScreenWidth(10),
+            ),
+            Container(
+              width: getProportionateScreenWidth(180),
+              child: RaisedButton(
+                elevation: 5,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (content) => CameraPreview()));
+                },
+                padding: EdgeInsets.all(25),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15)),
+                color: Color(0xFF4A3298),
+                child: Text('KRIMINAL',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold)),
+              ),
+            ),
+          ],
         ),
       ),
     );
